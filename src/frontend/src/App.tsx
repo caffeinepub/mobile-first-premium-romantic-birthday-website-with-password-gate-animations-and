@@ -10,6 +10,7 @@ import ImageMemorySection from './components/memories/ImageMemorySection';
 import VideoMemorySection from './components/memories/VideoMemorySection';
 import SurpriseSection from './components/SurpriseSection';
 import { getUnlockedState, setUnlockedState, getEnteredState, setEnteredState } from './lib/sessionFlags';
+import { Heart } from 'lucide-react';
 
 function App() {
   const [isUnlocked, setIsUnlocked] = useState(false);
@@ -32,31 +33,34 @@ function App() {
     setAudioEnabled(true);
   };
 
-  if (!isUnlocked) {
-    return <PasswordGate onUnlock={handleUnlock} />;
-  }
-
-  if (!hasEntered) {
-    return <EntryOverlay onEnter={handleEnter} />;
-  }
-
   return (
     <div className="relative min-h-screen">
       <AmbientBackground />
-      <EmojiHeader />
-      <BackgroundAudio enabled={audioEnabled} />
       
-      <main className="relative z-10 pt-16">
-        <HeroSection />
-        <BirthdayMessagePopup />
-        <ImageMemorySection />
-        <VideoMemorySection />
-        <SurpriseSection />
-        
-        <footer className="py-8 text-center text-sm text-muted-foreground/70">
-          <p>© 2026. Built with <span className="text-rose-gold-400">♥</span> using <a href="https://caffeine.ai" target="_blank" rel="noopener noreferrer" className="hover:text-rose-gold-400 transition-colors">caffeine.ai</a></p>
-        </footer>
-      </main>
+      {!isUnlocked ? (
+        <PasswordGate onUnlock={handleUnlock} />
+      ) : !hasEntered ? (
+        <EntryOverlay onEnter={handleEnter} />
+      ) : (
+        <>
+          <EmojiHeader />
+          <BackgroundAudio enabled={audioEnabled} />
+          
+          <main className="relative z-10 pt-16">
+            <HeroSection />
+            <BirthdayMessagePopup />
+            <ImageMemorySection />
+            <VideoMemorySection />
+            <SurpriseSection />
+            
+            <footer className="py-8 text-center text-sm text-muted-foreground/70">
+              <p className="flex items-center justify-center gap-1">
+                © 2026. Built with <Heart className="text-rose-gold-400 inline-block" size={14} fill="currentColor" /> using <a href="https://caffeine.ai" target="_blank" rel="noopener noreferrer" className="hover:text-rose-gold-400 transition-colors">caffeine.ai</a>
+              </p>
+            </footer>
+          </main>
+        </>
+      )}
     </div>
   );
 }

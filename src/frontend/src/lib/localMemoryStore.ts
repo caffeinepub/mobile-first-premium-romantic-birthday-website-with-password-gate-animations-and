@@ -11,7 +11,8 @@ export interface ImageMemory {
 
 export interface VideoMemory {
   id: string;
-  videoUrl: string | null;
+  mediaUrl: string | null;
+  mediaType: 'mp4' | 'mp3' | null;
 }
 
 const IMAGE_MEMORIES_KEY = 'birthday_image_memories';

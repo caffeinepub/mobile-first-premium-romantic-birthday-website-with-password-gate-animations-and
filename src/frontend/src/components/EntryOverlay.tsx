@@ -8,7 +8,7 @@ interface EntryOverlayProps {
 export default function EntryOverlay({ onEnter }: EntryOverlayProps) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-soft-pink-100 via-rose-gold-100 to-soft-pink-200 overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
         {[...Array(30)].map((_, i) => (
           <Heart
             key={`heart-${i}`}
@@ -37,19 +37,20 @@ export default function EntryOverlay({ onEnter }: EntryOverlayProps) {
         ))}
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-2xl">
-        <h1 className="text-4xl md:text-6xl font-serif font-bold text-soft-pink-600 mb-8 animate-fade-in leading-tight">
-          Enter Our World 🌍 💕
-          <br />
-          <span className="text-3xl md:text-5xl">Of Our Happiness</span>
+      <div className="relative z-20 text-center px-6 max-w-2xl">
+        <h1 className="text-5xl md:text-7xl font-serif font-bold text-soft-pink-600 mb-6 animate-fade-in">
+          Enter Our World 💕
         </h1>
-        
+        <p className="text-xl md:text-2xl text-rose-gold-600 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          A journey of love, memories, and endless moments together
+        </p>
         <Button
           onClick={onEnter}
           size="lg"
-          className="text-xl px-12 py-8 bg-gradient-to-r from-soft-pink-500 to-rose-gold-600 hover:from-soft-pink-600 hover:to-rose-gold-700 text-white font-semibold shadow-2xl hover:shadow-rose-gold-500/50 transition-all duration-300 hover:scale-105"
+          className="bg-gradient-to-r from-soft-pink-500 to-rose-gold-600 hover:from-soft-pink-600 hover:to-rose-gold-700 text-white text-xl px-12 py-8 shadow-2xl hover:shadow-rose-gold-500/50 transition-all duration-300 hover:scale-105 animate-fade-in"
+          style={{ animationDelay: '0.4s' }}
         >
-          Kuttu 🧿 🎀 🐶
+          Enter 💖
         </Button>
       </div>
     </div>

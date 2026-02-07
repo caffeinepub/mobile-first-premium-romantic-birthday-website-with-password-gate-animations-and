@@ -68,9 +68,17 @@ export default function AmbientBackground() {
         ctx.save();
         ctx.globalAlpha = particle.opacity;
         ctx.font = `${particle.size}px serif`;
-        ctx.fillStyle = particle.type === 'kiss' ? '#f472b6' : particle.type === 'heart' ? '#fb7185' : '#fda4af';
         
-        const emoji = particle.type === 'kiss' ? '💋' : particle.type === 'heart' ? '❤️' : '🌸';
+        // Use pink/rose-gold colors for all particles
+        if (particle.type === 'kiss') {
+          ctx.fillStyle = '#f472b6'; // pink
+        } else if (particle.type === 'heart') {
+          ctx.fillStyle = '#fb7185'; // rose
+        } else {
+          ctx.fillStyle = '#fda4af'; // light pink
+        }
+        
+        const emoji = particle.type === 'kiss' ? '💋' : particle.type === 'heart' ? '💖' : '🌸';
         ctx.fillText(emoji, particle.x, particle.y);
         ctx.restore();
       });

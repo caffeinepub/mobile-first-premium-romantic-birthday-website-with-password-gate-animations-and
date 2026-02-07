@@ -1,27 +1,26 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Set Image Memory cards to a fixed 2:3 aspect ratio",
+  "title": "Production publish (no feature/UI changes)",
   "requirements": [
     {
-      "id": "REQ-15",
-      "summary": "Change Image Memory cards (front and back) from 4:3 to a fixed 2:3 aspect ratio while preserving flip alignment and editing/upload interactions.",
+      "id": "REQ-24",
+      "summary": "Provide a production publish checklist/instructions to trigger deployment of the current codebase without changing app behavior or UI.",
       "acceptanceCriteria": [
-        "Each ImageMemoryCard displays at a 2:3 aspect ratio on the front side (image/placeholder) and the back side (message).",
-        "The 3D flip interaction still aligns correctly (front/back faces overlap and match dimensions).",
-        "Image upload, Replace/Add button placement, and Adjust/Save framing interactions still work and remain usable at the new aspect ratio.",
-        "No changes are made to the Video Memory section (it should remain 2:3 as already implemented)."
+        "A production deployment is triggered for the current codebase.",
+        "The production site loads successfully and reflects the latest deployed version.",
+        "No functional or UI regressions are introduced as part of the publish step."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/memories/ImageMemoryCard.tsx",
-          "operation": "modify",
-          "description": "Update the Image Memory card layout to render in a fixed 2:3 (width:height) aspect ratio instead of 4:3, ensuring both the front (image/placeholder) and back (message) faces share identical dimensions during the 3D flip. Adjust the placement of the aspect-ratio constraint so the flip container defines sizing and the faces fill it, preserving button positioning (Replace/Add, Adjust/Save) and drag-to-frame interactions."
+          "path": "frontend/PRODUCTION_DEPLOYMENT.md",
+          "operation": "create",
+          "description": "Add a concise production publish runbook for the current frontend codebase: pre-flight checks, build verification, deploy command(s) using the existing project tooling, and post-deploy smoke checks (load, critical flows). Keep strictly documentation-only to satisfy the 'no additional feature or UI changes' constraint."
         },
         {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Refine the shared 3D card CSS utilities (e.g., card-face sizing/positioning) so front/back faces reliably overlap and fill the same 2:3 container during the flip animation (no offset, no mismatched height), without affecting the Video Memory tile styling."
+          "path": "frontend/PRODUCTION_SMOKE_TEST.md",
+          "operation": "create",
+          "description": "Add a short manual smoke-test checklist for production verification focused on existing user flows (app loads, unlock/entry flow, audio toggle, memories sections render). Ensure this document does not request or imply any code/UI changes."
         }
       ]
     }

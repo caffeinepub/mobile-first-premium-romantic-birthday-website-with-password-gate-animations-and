@@ -94,7 +94,7 @@
     }
 
     .card-face {
-        @apply w-full;
+        @apply w-full h-full;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
     }

@@ -12,15 +12,16 @@ export default function VideoMemorySection() {
     } else {
       const initial: VideoMemory[] = Array.from({ length: 5 }, (_, i) => ({
         id: `video-${i}`,
-        videoUrl: null,
+        mediaUrl: null,
+        mediaType: null,
       }));
       setVideos(initial);
       saveVideoMemories(initial);
     }
   }, []);
 
-  const handleUpdateVideo = (id: string, videoUrl: string | null) => {
-    const updated = videos.map((v) => (v.id === id ? { ...v, videoUrl } : v));
+  const handleUpdateVideo = (id: string, mediaUrl: string | null, mediaType: 'mp4' | 'mp3' | null) => {
+    const updated = videos.map((v) => (v.id === id ? { ...v, mediaUrl, mediaType } : v));
     setVideos(updated);
     saveVideoMemories(updated);
   };
@@ -37,7 +38,7 @@ export default function VideoMemorySection() {
             <VideoMemoryTile
               key={video.id}
               video={video}
-              onUpdate={(videoUrl) => handleUpdateVideo(video.id, videoUrl)}
+              onUpdate={(mediaUrl, mediaType) => handleUpdateVideo(video.id, mediaUrl, mediaType)}
             />
           ))}
         </div>

@@ -1,35 +1,31 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-07T13:02:04.644Z",
+  "generatedAt": "2026-02-07T15:12:21.917Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
     "total": 1,
-    "implemented": 1,
+    "implemented": 0,
     "items": [
       {
-        "id": "REQ-15",
-        "summary": "Update the Image Memory section so each image card (both front image side and back message side) renders in a fixed 2:3 aspect ratio (width:height), replacing the current 4:3 aspect ratio sizing.",
-        "status": "implemented",
+        "id": "REQ-24",
+        "summary": "Publish the currently built version of the application to the production environment with no additional feature or UI changes.",
+        "status": "missing",
         "plannedFiles": [
-          "frontend/src/components/memories/ImageMemoryCard.tsx",
-          "frontend/src/index.css"
+          "frontend/PRODUCTION_DEPLOYMENT.md",
+          "frontend/PRODUCTION_SMOKE_TEST.md"
         ],
-        "matchedFiles": [
-          "frontend/src/components/memories/ImageMemoryCard.tsx"
-        ]
+        "matchedFiles": []
       }
     ]
   },
   "changedFiles": [
     "build-request.json",
     "feature_evidence.json",
-    "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/memories/ImageMemoryCard.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

@@ -1,9 +1,7 @@
 import { useState } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { Heart } from 'lucide-react';
-import { loveLetter } from '@/content/loveLetter';
+import LoveLetterModal from './LoveLetterModal';
 
 export default function SurpriseSection() {
   const [open, setOpen] = useState(false);
@@ -15,34 +13,15 @@ export default function SurpriseSection() {
           A Special Surprise For You 💌
         </h2>
 
-        <Dialog open={open} onOpenChange={setOpen}>
-          <DialogTrigger asChild>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white text-xl px-12 py-8 shadow-2xl hover:shadow-rose-500/50 transition-all duration-300 hover:scale-105"
-            >
-              Open Love Letter 💌 💕
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-3xl max-h-[80vh] glass-panel-pink border-rose-300">
-            <DialogHeader>
-              <DialogTitle className="text-3xl font-serif text-rose-700 text-center flex items-center justify-center gap-2">
-                <Heart className="text-rose-500" fill="currentColor" size={32} />
-                My Love Letter To You
-                <Heart className="text-rose-500" fill="currentColor" size={32} />
-              </DialogTitle>
-            </DialogHeader>
-            <ScrollArea className="h-[60vh] pr-4">
-              <div className="space-y-4 text-rose-600 text-base md:text-lg leading-relaxed">
-                {loveLetter.split('\n').map((paragraph, i) => (
-                  <p key={i} className="text-left">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            </ScrollArea>
-          </DialogContent>
-        </Dialog>
+        <Button
+          size="lg"
+          onClick={() => setOpen(true)}
+          className="bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white text-xl px-12 py-8 shadow-2xl hover:shadow-rose-500/50 transition-all duration-300 hover:scale-105"
+        >
+          Open Love Letter 💌 💕
+        </Button>
+
+        <LoveLetterModal open={open} onOpenChange={setOpen} />
 
         <div className="glass-panel-pink rounded-3xl p-8 md:p-12 space-y-6 shadow-2xl">
           <h3 className="text-2xl md:text-3xl font-serif font-bold text-rose-700">

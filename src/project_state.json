@@ -1,14 +1,17 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
-  "summary": "Mobile-first romantic premium birthday website with password gate, animated hero/popup, looping background music, and interactive image/video memory sections with flip/rotate surprise messages and user media upload/replace.",
+  "projectStateVersion": 15,
+  "summary": "Mobile-first romantic premium birthday website with password gate, animated hero/popup, looping background music, and interactive image/video memory sections with flip/rotate surprise messages and user media upload/replace (no enforced 2:3 aspect ratio; support JPG/MP4/MP3 uploads up to 20MB).",
   "architectural_notes": [
     "Mobile-first responsive single-page romantic birthday site.",
     "Password gate required before showing main content.",
     "Requires support for local media selection (phone gallery) for images/videos and replacing existing items.",
     "Interactive 3D flip/rotate card UI with front image and back text; per-card editing (drag-to-adjust/crop positioning + save).",
     "Continuous looping background audio (MP3) with autoplay considerations on mobile.",
-    "Image Memory cards should enforce a consistent 2:3 aspect ratio for the image/tile layout."
+    "Do not enforce a fixed 2:3 aspect ratio for Image/Video Memory previews; display media in its normal/original preview framing.",
+    "Support user uploads for JPG images, MP4 videos, and MP3 audio with a maximum file size of 20MB per upload (validate client-side).",
+    "Love letter modal: support typing animation playback when opening (progressive text reveal).",
+    "Image Memory cards may need configurable aspect ratio (request: 1:1 square)."
   ],
   "known_issues": [],
   "isFixRequest": false,
@@ -132,6 +135,70 @@
         "REQ-15"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-the-enforced-2-3-aspect-ratio-styling-from-the-image-memory-cards-front-and-back-and-the-video-memory-tiles-so-media-previews-use-a-natural-normal-layout-instead-of-aspect-2-3",
+      "title": "Remove the enforced 2:3 aspect ratio styling from the Image Memory cards (front and back) and the Video Memory tiles so media previews use a natural/normal layout instead of `aspect-[2/3]`.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-image-and-video-preview-rendering-so-the-full-selected-media-is-visible-in-the-preview-no-cropping",
+      "title": "Update image and video preview rendering so the full selected media is visible in the preview (no cropping).",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-image-memory-section-restrict-uploads-to-jpg-images-only-and-enforce-a-maximum-file-size-of-20mb-show-a-clear-inline-error-message-english-when-validation-fails",
+      "title": "In the Image Memory section, restrict uploads to JPG images only and enforce a maximum file size of 20MB; show a clear inline error message (English) when validation fails.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-video-memory-section-allow-uploads-of-mp4-video-and-mp3-audio-files-with-a-maximum-size-of-20mb-render-a-playable-preview-appropriate-to-the-file-type-and-show-a-clear-inline-error-message-english-when-validation-fails",
+      "title": "In the Video Memory section, allow uploads of MP4 video and MP3 audio files with a maximum size of 20MB; render a playable preview appropriate to the file type and show a clear inline error message (English) when validation fails.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-love-letter-modal-so-that-when-the-user-opens-the-love-letter-the-love-letter-text-reveals-with-a-typing-animation-typewriter-effect-instead-of-appearing-instantly-while-preserving-the-exact-love-letter-content-and-line-breaks",
+      "title": "Update the Love Letter modal so that when the user opens the Love Letter, the love letter text reveals with a typing animation (typewriter effect) instead of appearing instantly, while preserving the exact love letter content and line breaks.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-image-memory-cards-to-render-in-a-strict-1-1-square-format-for-both-the-front-image-side-and-the-back-message-side-without-cropping-the-selected-image-continue-to-show-the-full-image-via-contain-behavior",
+      "title": "Change Image Memory cards to render in a strict 1:1 (square) format for both the front (image) side and the back (message) side, without cropping the selected image (continue to show the full image via contain behavior).",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-black-heart-element-s-from-the-site-ui-animations-and-replace-them-with-a-theme-consistent-non-black-alternative-e-g-themed-pink-rose-gold-heart-styling-wherever-the-black-heart-currently-appears",
+      "title": "Remove the black heart element(s) from the site UI/animations and replace them with a theme-consistent non-black alternative (e.g., themed pink/rose-gold heart styling) wherever the black heart currently appears.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-site-wide-ambient-background-animations-run-across-the-whole-site-from-the-beginning-including-the-password-gate-and-entry-overlay-screens-rather-than-only-starting-after-entering-the-main-content",
+      "title": "Ensure the site-wide ambient/background animations run across the whole site from the beginning (including the password gate and entry overlay screens), rather than only starting after entering the main content.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -208,9 +275,41 @@
       "status": "pending"
     },
     {
-      "id": "AR-13",
-      "summary": "Update Image Memory section image card/tile grid so each image displays in a fixed 2:3 aspect ratio",
+      "id": "AR-14",
+      "summary": "Remove enforced 2:3 aspect ratio in Image/Video Memory previews; show each photo/video preview in its normal/original framing, and allow user uploads of JPG/MP4/MP3 up to 20MB",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Love letter section: animate the love letter content with a typing effect when opened",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Image Memory section: change image card display ratio to 1:1 (square) format",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Remove the black heart element from site animations/decor",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Start/trigger site-wide background animations from the beginning across the whole site (global animation start)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Publish the currently built version of the application to the production environment with no additional feature or UI changes.",
+      "reqIds": [
+        "REQ-24"
+      ],
       "status": "pending"
     }
   ],

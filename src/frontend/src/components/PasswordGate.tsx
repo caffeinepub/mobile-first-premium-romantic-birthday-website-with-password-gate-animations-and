@@ -25,8 +25,8 @@ export default function PasswordGate({ onUnlock }: PasswordGateProps) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-soft-pink-50 via-rose-gold-50 to-soft-pink-100">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="relative min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-soft-pink-50 via-rose-gold-50 to-soft-pink-100">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
         {[...Array(20)].map((_, i) => (
           <Heart
             key={i}
@@ -42,7 +42,7 @@ export default function PasswordGate({ onUnlock }: PasswordGateProps) {
         ))}
       </div>
       
-      <Card className="w-full max-w-md glass-panel border-soft-pink-200/50 shadow-2xl">
+      <Card className="relative z-20 w-full max-w-md glass-panel border-soft-pink-200/50 shadow-2xl">
         <CardHeader className="text-center space-y-2">
           <div className="flex justify-center mb-4">
             <Heart className="text-rose-gold-400 animate-pulse" size={48} fill="currentColor" />

@@ -1,0 +1,38 @@
+{
+  "kind": "build_request",
+  "title": "Set Image Memory cards to a fixed 2:3 aspect ratio",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-15",
+      "text": "Update the Image Memory section so each image card (both front image side and back message side) renders in a fixed 2:3 aspect ratio (width:height), replacing the current 4:3 aspect ratio sizing.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "In image section change the grid size of each image to 2:3 ratio"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each ImageMemoryCard displays at a 2:3 aspect ratio on the front side (image/placeholder) and the back side (message).",
+        "The 3D flip interaction still aligns correctly (front/back faces overlap and match dimensions).",
+        "Image upload, Replace/Add button placement, and Adjust/Save framing interactions still work and remain usable at the new aspect ratio.",
+        "No changes are made to the Video Memory section (it should remain 2:3 as already implemented)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend changes must not modify any files under frontend/src/components/ui or other paths listed as immutable in SYSTEM_CONTEXT.",
+    "Do not introduce new backend services or databases; image memory sizing is a frontend-only change."
+  ],
+  "nonGoals": [
+    "Changing the number of image cards, memory persistence behavior, or the flip animation style beyond what is required to support the 2:3 aspect ratio.",
+    "Altering user-facing text/copy in the Image Memory section."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

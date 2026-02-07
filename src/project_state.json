@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Mobile-first romantic premium birthday website with password gate, animated hero/popup, looping background music, and interactive image/video memory sections with flip/rotate surprise messages and user media upload/replace.",
+  "architectural_notes": [
+    "Mobile-first responsive single-page romantic birthday site.",
+    "Password gate required before showing main content.",
+    "Requires support for local media selection (phone gallery) for images/videos and replacing existing items.",
+    "Interactive 3D flip/rotate card UI with front image and back text; per-card editing (drag-to-adjust/crop positioning + save).",
+    "Continuous looping background audio (MP3) with autoplay considerations on mobile.",
+    "Image Memory cards should enforce a consistent 2:3 aspect ratio for the image/tile layout."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-implement-a-mobile-first-password-gate-as-the-first-screen-that-blocks-all-site-content-until-the-correct-password-is-entered-exactly-as-18200403200-including-emojis-provide-a-single-password-input-and-an-unlock-action-on-incorrect-password-show-a-clear-inline-error-message-after-successful-unlock-persist-the-unlocked-state-for-the-session-at-minimum-so-the-user-can-navigate-without-re-entering-the-password-until-refresh-logout",
+      "title": "Implement a mobile-first password gate as the first screen that blocks all site content until the correct password is entered exactly as: \"18200403200🧿🎀\" (including emojis). Provide a single password input and an unlock action; on incorrect password show a clear inline error message. After successful unlock, persist the unlocked state for the session (at minimum) so the user can navigate without re-entering the password until refresh/logout.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-coherent-premium-romantic-visual-theme-non-blue-non-purple-and-apply-it-consistently-across-all-sections-elegant-typography-soft-pink-rose-cream-palette-glassy-pinkish-panels-and-smooth-micro-animations-keep-effects-subtle-and-emotional-no-heavy-flashy-effects",
+      "title": "Create a coherent, premium romantic visual theme (non-blue/non-purple) and apply it consistently across all sections: elegant typography, soft pink/rose/cream palette, glassy pinkish panels, and smooth micro-animations. Keep effects subtle and emotional (no heavy/flashy effects).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-top-header-row-that-displays-the-emojis-and-animates-them-to-blink-one-by-one-in-order-looping-the-header-must-remain-visible-at-the-top-on-mobile-and-not-overlap-key-content",
+      "title": "Add a top header row that displays the emojis 🐶🧿🎀👸🏻🫂👑😘🍻🌍 and animates them to blink one-by-one in order (looping). The header must remain visible at the top on mobile and not overlap key content.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-entry-popup-overlay-after-unlocking-with-the-text-enter-our-world-of-our-happiness-and-a-primary-button-labeled-exactly-kuttu-the-user-must-interact-with-this-button-to-proceed-into-the-main-page-content-and-this-interaction-should-also-be-used-to-start-background-audio-to-satisfy-mobile-autoplay-restrictions",
+      "title": "Implement an entry popup/overlay after unlocking with the text \"Enter Our World 🌍 💕 Of Our Happiness\" and a primary button labeled exactly \"Kuttu 🧿 🎀 🐶\". The user must interact with this button to proceed into the main page content (and this interaction should also be used to start background audio to satisfy mobile autoplay restrictions).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-hero-section-as-a-full-screen-mobile-first-section-with-a-custom-romantic-background-image-that-subtly-fades-gentle-opacity-zoom-fade-and-a-pinkish-light-glass-overlay-panel-containing-bold-headline-text-and-the-provided-name-label-list-include-the-following-hero-text-exactly-line-breaks-preserved-where-provided-1-bold-headline-happy-birthday-my-woman-bangaaaraaa-2-bold-clear-list-block-renu-bachha-idiotu-bangara-pajili-darling-mine-everything-kuttu-forever-wfy-nannavalu-maa-3-in-a-separate-boxed-subtext-area-show-these-lines-you-are-mine-today-my-tomorrow-my-forever-i-love-you-endlessly-pajili-jaan-ammu-kuttu-you-and-me-always-and-forever",
+      "title": "Build the hero section as a full-screen (mobile-first) section with a custom romantic background image that subtly fades (gentle opacity/zoom fade) and a pinkish light/glass overlay panel containing bold headline text and the provided name/label list. Include the following hero text exactly (line breaks preserved where provided):\n1) Bold headline: \"Happy Birthday My Woman 🧿 🎀 Bangaaaraaa 🫂 🫀 ❤️\"\n2) Bold/clear list block:\n\"Renu 🧿🎀👸🏻🫂\nBachha 🎀👸🏻🧿🌍\nIdiotu ❤️🧿🫂👸🏻🌍🫀\nBangara 👑🌍🥹💋🫂❤️‍🩹🍻🫶🏻\nPajili 🐶 👸🏻 🧿\nDarling 😘 😚\nMine 🧿🍻❤️\nEverything 🧿🎀💟🤍😘\nKuttu 🐶👸🏻🧿🌍\nForever 🧿 🎀 👸🏻\nWfy 🌍 💕 👑 🫂\nNannavalu 🧿 🎀 👸🏻\nMaa 🤌🏻🥺🫂\"\n3) In a separate boxed subtext area, show these lines:\n- \"You Are Mine 🧿 🎀 Today, My Tomorrow, My Forever 🛐🐶👑\"\n- \"I Love You Endlessly Pajili Jaan Ammu Kuttu 🧿 🌹💕🧿🎀🐶👑\"\n- \"You and Me Always And Forever 🧿 🎀\"",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-continuous-subtle-background-animations-across-the-site-floating-hearts-gentle-rose-petals-drift-and-a-gently-blinking-moving-kiss-emoji-element-ensure-these-effects-are-elegant-low-opacity-slow-movement-and-do-not-interfere-with-readability-or-interactions",
+      "title": "Add continuous, subtle background animations across the site: floating hearts, gentle rose petals drift, and a gently blinking/moving kiss emoji element. Ensure these effects are elegant (low opacity, slow movement) and do not interfere with readability or interactions.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-popup-message-box-section-or-modal-that-displays-the-following-message-exactly-and-includes-floating-heart-and-sparkle-animations-within-around-the-popup-as-uh-are-completing-ur-19teen-age-u-r-entering-in-20s-so-by-this-birthday-u-r-20s-so-wishing-you-a-lovely-birthday-to-my-life-partner",
+      "title": "Create a popup message box section (or modal) that displays the following message exactly and includes floating heart and sparkle animations within/around the popup:\n\"As Uh Are Completing Ur 19teen Age & U R Entering in 20s , So By This Birthday U R 20s so, Wishing You A Lovely Birthday To My Life Partner 🥰 🫂 🫀 🎀 🧿 👸🏻\"",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-looping-background-music-support-using-a-custom-mp3-file-served-as-a-static-asset-provide-minimal-playback-controls-play-pause-and-mute-and-ensure-audio-loops-continuously-when-enabled-respect-mobile-autoplay-policies-by-starting-playback-only-after-a-user-gesture-e-g-after-pressing-kuttu",
+      "title": "Add looping background music support using a custom MP3 file served as a static asset. Provide minimal playback controls (play/pause and mute) and ensure audio loops continuously when enabled. Respect mobile autoplay policies by starting playback only after a user gesture (e.g., after pressing \"Kuttu 🧿 🎀 🐶\").",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-image-memory-section-that-displays-a-vertical-one-under-another-list-grid-of-43-image-cards-by-default-and-supports-adding-unlimited-additional-cards-each-card-must-display-an-image-with-soft-shadow-and-rounded-corners-contain-an-in-image-add-or-replace-control-that-opens-a-phone-gallery-file-picker-image-be-clickable-tappable-to-trigger-a-smooth-3d-rotate-fade-flip-to-a-back-side-showing-a-romantic-surprise-message-text-must-fit-inside-the-card-provide-per-card-editing-controls-in-working-mode-drag-to-adjust-image-framing-pan-within-the-frame-and-a-save-button-that-persists-the-framing-for-that-card-also-support-replacing-an-existing-image-for-a-card",
+      "title": "Implement an Image Memory section that displays a vertical, one-under-another list/grid of 43 image cards by default, and supports adding unlimited additional cards. Each card must:\n- Display an image with soft shadow and rounded corners\n- Contain an in-image \"Add\" or \"Replace\" control that opens a phone gallery file picker (image/*)\n- Be clickable/tappable to trigger a smooth 3D rotate + fade flip to a back side showing a romantic surprise message (text must fit inside the card)\n- Provide per-card editing controls in working mode: drag to adjust image framing (pan within the frame), and a Save button that persists the framing for that card\nAlso support replacing an existing image for a card.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-populate-the-back-side-surprise-messages-for-the-image-memory-cards-using-the-provided-romantic-messages-examples-list-as-selectable-assignable-messages-ensure-at-least-one-message-per-card-by-default-and-allow-reusing-messages-when-there-are-more-cards-than-messages",
+      "title": "Populate the back-side surprise messages for the Image Memory cards using the provided \"ROMANTIC MESSAGES EXAMPLES\" list as selectable/assignable messages. Ensure at least one message per card by default and allow reusing messages when there are more cards than messages.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-video-memory-section-that-displays-a-grid-of-5-videos-with-a-fixed-2-3-aspect-ratio-provide-per-tile-add-replace-controls-to-select-videos-from-the-phone-gallery-video-before-publishing-viewing-videos-should-display-a-poster-preview-frame-and-support-tap-to-play-controls",
+      "title": "Implement a Video Memory section that displays a grid of 5 videos with a fixed 2:3 aspect ratio. Provide per-tile Add/Replace controls to select videos from the phone gallery (video/*) before publishing/viewing. Videos should display a poster/preview frame and support tap-to-play controls.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-surprise-section-that-includes-1-a-cover-love-letter-interaction-modal-popup-that-presents-the-provided-long-letter-text-exactly-as-written-2-a-birthday-wish-text-area-with-an-emotional-tone-3-a-closing-line-displayed-exactly-i-m-forever-your-s-always-your-s-and-endlessly-yours",
+      "title": "Add a Surprise section that includes:\n1) A cover love-letter interaction (modal/popup) that presents the provided long letter text exactly as written.\n2) A birthday wish text area with an emotional tone.\n3) A closing line displayed exactly: \"I'm Forever Your's, Always  Your's and Endlessly Yours 💯 🫂 🧿 🥺 🐶 🙇🏻 ❤️\"",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-static-assets-pipeline-for-custom-visuals-required-by-the-design-place-generated-images-in-frontend-public-assets-generated-and-reference-them-directly-from-the-frontend-no-backend-routing-use-the-generated-hero-background-image-for-the-full-screen-hero-background",
+      "title": "Add a static-assets pipeline for custom visuals required by the design: place generated images in frontend/public/assets/generated and reference them directly from the frontend (no backend routing). Use the generated hero background image for the full-screen hero background.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-global-styling-theme-to-strongly-reflect-a-soft-pink-rose-gold-palette-and-avoid-blue-purple-tones-and-apply-it-consistently-across-major-ui-surfaces-password-gate-entry-overlay-hero-section-popups-modals-memory-cards-header-and-footer-by-adjusting-shared-theme-tokens-and-replacing-any-remaining-gradients-text-border-colors-that-do-not-match-the-soft-pink-rose-gold-vibe",
+      "title": "Update the global styling theme to strongly reflect a soft pink + rose-gold palette (and avoid blue/purple tones), and apply it consistently across major UI surfaces (password gate, entry overlay, hero section, popups/modals, memory cards, header, and footer) by adjusting shared theme tokens and replacing any remaining gradients/text/border colors that do not match the soft pink/rose-gold vibe.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-image-memory-section-so-each-image-card-both-front-image-side-and-back-message-side-renders-in-a-fixed-2-3-aspect-ratio-width-height-replacing-the-current-4-3-aspect-ratio-sizing",
+      "title": "Update the Image Memory section so each image card (both front image side and back message side) renders in a fixed 2:3 aspect ratio (width:height), replacing the current 4:3 aspect ratio sizing.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Password-protected entry (password: 18200403200🧿🎀) before accessing site content",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Top header with specified emojis (🐶🧿🎀👸🏻🫂👑😘🍻🌍) blinking one-by-one",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Romantic premium theme styling with floating hearts + subtle rose petals + smooth elegant animations/fonts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "\"Enter Our World 🌍 💕\" popup entry with button labeled \"Kuttu 🧿 🎀 🐶\"",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Hero section: full-screen custom fading background image (romantic couple/roses/pink ribbon) with pinkish overlay popup text (birthday headings + names list + subtexts)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Popup message box with provided birthday message and floating heart/sparkle animations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Looping background music playback from a custom MP3",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Image Memory section: vertical (one-under-another) grid of 43+ image cards with user add/replace from phone gallery, per-card edit controls (add/replace in image, drag-to-adjust, save)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Image cards interactive: tap to 3D rotate + fade to back-side romantic surprise message; ensure text fits inside card; soft shadow + rounded corners",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Video Memory section: grid of 5 videos in 2:3 ratio added from phone gallery before publishing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Surprise section includes a cover love-letter popup with provided long letter text + closing line",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Update site styling/vibe to use a soft pink + rose-gold color palette",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Update Image Memory section image card/tile grid so each image displays in a fixed 2:3 aspect ratio",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Mobile-first premium romantic birthday website with password gate, animations, and media memories",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

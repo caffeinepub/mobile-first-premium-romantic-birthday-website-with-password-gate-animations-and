@@ -1,0 +1,23 @@
+{
+  "frontend/src/App.tsx": "Main application component managing password gate, entry overlay, and all content sections with session state persistence and rose-gold heart accent in footer.",
+  "frontend/src/components/PasswordGate.tsx": "Password authentication component with soft pink and rose-gold themed gradients, floating heart animations, and glass panel styling.",
+  "frontend/src/components/EntryOverlay.tsx": "Full-screen entry overlay with soft pink and rose-gold gradients, floating hearts and sparkles, and \"Enter Our World\" heading with themed button.",
+  "frontend/src/components/EmojiHeader.tsx": "Sticky header displaying emojis with sequential blinking animation and soft pink/rose-gold gradient background.",
+  "frontend/src/components/HeroSection.tsx": "Full-screen hero section with fading background image, glass panel overlay, and all provided birthday text.",
+  "frontend/src/components/AmbientBackground.tsx": "Canvas-based ambient animation layer with floating hearts, petals, and kiss emojis.",
+  "frontend/src/components/BirthdayMessagePopup.tsx": "Dialog popup displaying the birthday message with soft pink and rose-gold themed styling, heart and sparkle animations.",
+  "frontend/src/components/BackgroundAudio.tsx": "Background music controller with play/pause and mute controls, respecting autoplay policies.",
+  "frontend/src/components/memories/ImageMemorySection.tsx": "Image memory grid manager with 43 default cards and unlimited add capability.",
+  "frontend/src/components/memories/ImageMemoryCard.tsx": "Individual image card with 3D flip animation, file upload, drag-to-adjust framing, and save functionality using soft pink and rose-gold gradient buttons, now displaying in 2:3 aspect ratio.",
+  "frontend/src/components/memories/VideoMemorySection.tsx": "Video memory grid displaying 5 tiles in 2:3 aspect ratio.",
+  "frontend/src/components/memories/VideoMemoryTile.tsx": "Individual video tile with upload/replace and playback controls.",
+  "frontend/src/components/SurpriseSection.tsx": "Surprise section with love letter modal trigger, birthday wishes, and closing message.",
+  "frontend/src/components/LoveLetterModal.tsx": "Scrollable modal dialog displaying the full love letter text with soft pink and rose-gold themed borders, backgrounds, and icon accents.",
+  "frontend/src/lib/sessionFlags.ts": "Session storage utilities for persisting unlocked and entered states.",
+  "frontend/src/lib/localMemoryStore.ts": "Local storage utilities for persisting image and video memory data.",
+  "frontend/src/content/romanticMessages.ts": "Array of 43 romantic messages for image card back sides.",
+  "frontend/src/content/loveLetter.ts": "Full love letter text for the surprise section modal.",
+  "frontend/src/index.css": "Global styles with soft pink and rose-gold OKLCH color system (hue ~25-30), elegant serif fonts, glass panel utilities with warm pink tints, and smooth animations with reduced-motion support.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended soft-pink and rose-gold color palettes, custom border radii, warm-toned shadows, and serif font families.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as all data is stored locally in browser."
+}

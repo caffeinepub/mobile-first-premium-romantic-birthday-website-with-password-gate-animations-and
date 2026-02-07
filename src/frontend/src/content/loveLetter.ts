@@ -1,0 +1,5 @@
+export const loveLetter = `Hey ! Listen Kuttu 🐶 👸🏻 🧿 🌍 No Matter What , I'll be always with uh & I Will Never Ever Leave Ur Hand In Any Situation, I Promise Uh To Keep Always Happy And Smiling As U R My Bachha 🎀 👸🏻 🧿 And I Can Go At Extent For Uh And Ur Happiness 😘 😘 I Hope I Can Make You Feel As Valued And Loved As You Deserve. You're The Best Partner Anyone Could Ever Ask For. The Most Beautiful Girl In The World Genuinely And I Hope You Believe That Coz I Mean It With My Whole Heart And I Can't Wait To Marry You And Make Cute Little People With You.
+
+You're Perfect For Me In Every Way, My Love 🐶🫀🌍 ,
+
+Thank You For Taking The Risk🤌🏻 Of Loving 🤌🏻Me 🙇🏻🫂When It Wasn't Easy. You Stepped Into My World With Patience, Softness, And An Open Heart 😚. You Saw My Walls🥺, My Doubts🥺, My Quiet Fears🥺, And Still Chose To Stay🙇🏻. Your Love Feels Like Something Steady 🥰When My Mind Isn't🛐. It Reaches The Parts Of Me I Never Knew How To Explain🥺🤌🏻. I'm Grateful That You Chose Me, Even On The Days I Struggle To Choose Myself 🙇🏻`;

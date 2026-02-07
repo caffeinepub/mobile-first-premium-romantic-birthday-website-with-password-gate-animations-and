@@ -1,2 +1,3 @@
-# mobile-first-premium-romantic-birthday-website-with-password-gate-animations-and
-Exported from Caffeine project: Mobile-first premium romantic birthday website with password gate, animations, and media memories
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`
